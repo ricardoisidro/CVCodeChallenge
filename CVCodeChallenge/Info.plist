@@ -24,6 +24,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+    <key>ROOT_PATH</key>
+    <string>$(ROOT_PATH)</string>
+    <key>ROOT_HOST</key>
+    <string>$(ROOT_HOST)</string>
+    <key>ROOT_SCHEME</key>
+    <string>$(ROOT_SCHEME)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

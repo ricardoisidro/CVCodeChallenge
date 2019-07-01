@@ -9,26 +9,51 @@
 import XCTest
 
 class CVCodeChallengeUITests: XCTestCase {
-
+    
+    var app: XCUIApplication!
+    let tablesQuery = XCUIApplication().tables
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testProfileDetails() {
+        let myProfileStaticText = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["My Profile"]/*[[".cells.staticTexts[\"My Profile\"]",".staticTexts[\"My Profile\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        myProfileStaticText.tap()
+        let name = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["Ricardo Isidro Ramírez"]/*[[".cells.staticTexts[\"Ricardo Isidro Ramírez\"]",".staticTexts[\"Ricardo Isidro Ramírez\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        let age = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["32"]/*[[".cells.staticTexts[\"32\"]",".staticTexts[\"32\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        let country = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["Mexican"]/*[[".cells.staticTexts[\"Mexican\"]",".staticTexts[\"Mexican\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        if myProfileStaticText.isSelected {
+            XCTAssertTrue(name.exists)
+            XCTAssertTrue(age.exists)
+            XCTAssertTrue(country.exists)
+        }
+        myProfileStaticText.tap()
     }
-
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testJobDetails() {
+        let myJobStaticText = tablesQuery.cells.staticTexts["Former Jobs"]
+        myJobStaticText.tap()
+        let position = tablesQuery.cells.staticTexts["iOS Developer"]
+        if myJobStaticText.isSelected {
+            XCTAssertTrue(position.exists)
+        }
+        myJobStaticText.tap()
     }
-
+    
+    func testSkillDetails() {
+        let mySkillsStaticText = tablesQuery.cells.staticTexts["Skills"]
+        mySkillsStaticText.tap()
+        let skill1 = tablesQuery.cells.staticTexts["Swift"]
+        let skill2 = tablesQuery.cells.staticTexts["AutoLayout"]
+        let skill3 = tablesQuery.cells.staticTexts["Networking"]
+        if mySkillsStaticText.isSelected {
+            XCTAssertTrue(skill1.exists)
+            XCTAssertTrue(skill2.exists)
+            XCTAssertTrue(skill3.exists)
+        }
+    }
 }
+

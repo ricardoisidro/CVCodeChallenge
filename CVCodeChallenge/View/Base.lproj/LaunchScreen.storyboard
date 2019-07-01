@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RK9-Zd-yVL">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vMD-W1-u8x">
+            <objects>
+                <viewController id="RK9-Zd-yVL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UG2-Mf-sKp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-Globant" translatesAutoresizingMaskIntoConstraints="NO" id="d8K-7j-Uar">
+                                <rect key="frame" x="69" y="414.5" width="276" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="iah-mF-gBd"/>
+                                    <constraint firstAttribute="width" constant="276" id="srF-VA-d8X"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d8K-7j-Uar" firstAttribute="centerX" secondItem="UG2-Mf-sKp" secondAttribute="centerX" id="9XA-Sy-f0W"/>
+                            <constraint firstItem="d8K-7j-Uar" firstAttribute="centerY" secondItem="UG2-Mf-sKp" secondAttribute="centerY" id="eff-Jq-GEU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v9u-4A-8w2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnd-8z-uG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="244"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-Globant" width="2763" height="679"/>
+    </resources>
+</document>
