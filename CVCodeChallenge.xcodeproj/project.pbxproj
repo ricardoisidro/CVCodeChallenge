@@ -31,6 +31,10 @@
 		92AB4D8322CA754C0033AE1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92AB4D8222CA754C0033AE1F /* Localizable.strings */; };
 		92AB4D8622CA75970033AE1F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D8522CA75970033AE1F /* Environment.swift */; };
 		92AB4D8822CA7B040033AE1F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D8722CA7B040033AE1F /* ApiService.swift */; };
+		92D05C5822CBCC97003A7FF9 /* TableSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5722CBCC97003A7FF9 /* TableSizes.swift */; };
+		92D05C5B22CBCDC1003A7FF9 /* UILabel+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5A22CBCDC1003A7FF9 /* UILabel+Utils.swift */; };
+		92D05C5D22CBD809003A7FF9 /* LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */; };
+		92D05C6122CC155D003A7FF9 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		92AB4D8422CA75780033AE1F /* MainConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MainConfig.xcconfig; sourceTree = "<group>"; };
 		92AB4D8522CA75970033AE1F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		92AB4D8722CA7B040033AE1F /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		92D05C5722CBCC97003A7FF9 /* TableSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSizes.swift; sourceTree = "<group>"; };
+		92D05C5A22CBCDC1003A7FF9 /* UILabel+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Utils.swift"; sourceTree = "<group>"; };
+		92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraints.swift; sourceTree = "<group>"; };
+		92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,7 @@
 		92AB4D2F22CA6E530033AE1F /* CVCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				92D05C5922CBCDAE003A7FF9 /* Extensions */,
 				92AB4D6322CA6EB90033AE1F /* ViewModel */,
 				92AB4D6222CA6EB10033AE1F /* View */,
 				92AB4D6122CA6EA70033AE1F /* Model */,
@@ -167,6 +176,7 @@
 				92AB4D8222CA754C0033AE1F /* Localizable.strings */,
 				92AB4D8422CA75780033AE1F /* MainConfig.xcconfig */,
 				92AB4D8522CA75970033AE1F /* Environment.swift */,
+				92D05C5722CBCC97003A7FF9 /* TableSizes.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -213,6 +223,8 @@
 				92AB4D3422CA6E530033AE1F /* Main.storyboard */,
 				92AB4D6822CA719B0033AE1F /* DetailTableViewCell.swift */,
 				92AB4D6A22CA71CC0033AE1F /* LoadingViewController.swift */,
+				92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */,
+				92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +236,14 @@
 				92AB4D6622CA6F450033AE1F /* TableViewModelController+TableViewDelegate.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		92D05C5922CBCDAE003A7FF9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92D05C5A22CBCDC1003A7FF9 /* UILabel+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +384,7 @@
 				92AB4D7722CA739D0033AE1F /* ApiResource.swift in Sources */,
 				92AB4D3322CA6E530033AE1F /* MainTableViewController.swift in Sources */,
 				92AB4D7F22CA74D40033AE1F /* LoadingError.swift in Sources */,
+				92D05C5D22CBD809003A7FF9 /* LayoutConstraints.swift in Sources */,
 				92AB4D7122CA72510033AE1F /* Skill.swift in Sources */,
 				92AB4D3122CA6E530033AE1F /* AppDelegate.swift in Sources */,
 				92AB4D6922CA719B0033AE1F /* DetailTableViewCell.swift in Sources */,
@@ -374,8 +395,11 @@
 				92AB4D6522CA6EF70033AE1F /* TableViewModelController.swift in Sources */,
 				92AB4D8822CA7B040033AE1F /* ApiService.swift in Sources */,
 				92AB4D6B22CA71CD0033AE1F /* LoadingViewController.swift in Sources */,
+				92D05C5B22CBCDC1003A7FF9 /* UILabel+Utils.swift in Sources */,
+				92D05C5822CBCC97003A7FF9 /* TableSizes.swift in Sources */,
 				92AB4D8122CA75080033AE1F /* CVResource.swift in Sources */,
 				92AB4D6F22CA72290033AE1F /* Job.swift in Sources */,
+				92D05C6122CC155D003A7FF9 /* JobDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +587,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.CVCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -582,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.CVCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

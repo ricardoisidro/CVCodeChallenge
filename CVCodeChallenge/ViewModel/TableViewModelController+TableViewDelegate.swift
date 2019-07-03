@@ -45,15 +45,18 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
         } else {
+            if indexPath.section == 1 {
+                delegate?.tableViewModelControllerDidSelectJob(self, didSelect: indexPath)
+            }
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 60.0
+            return TableSizes.Header.height
         } else {
-            return 44.0
+            return TableSizes.Detail.height
         }
     }
 }
@@ -62,15 +65,15 @@ private extension TableViewModelController {
     
     func createHeader(using cell: UITableViewCell, in index: IndexPath) -> UITableViewCell {
         cell.textLabel?.text = tableCellModel[index.section].cellTitle
-        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: TableSizes.Header.fontSize)
         return cell
     }
     
     func createDetail(using cell: DetailTableViewCell, in index: IndexPath) -> DetailTableViewCell {
         cell.title.text = tableCellModel[index.section].sectionData[index.row - 1].subCellTitle
-        cell.title.font = UIFont.boldSystemFont(ofSize: 15)
+        cell.title.font = UIFont.boldSystemFont(ofSize: TableSizes.Detail.fontSize)
         cell.detail.text = tableCellModel[index.section].sectionData[index.row - 1].subCellInformation
-        cell.detail.font = UIFont.systemFont(ofSize: 15)
+        cell.detail.font = UIFont.systemFont(ofSize: TableSizes.Detail.fontSize)
         return cell
     }
 }

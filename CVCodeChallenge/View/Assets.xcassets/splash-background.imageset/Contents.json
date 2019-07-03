@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "logo-Globant.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "splash-background.jpg",
       "scale" : "2x"
     },
     {

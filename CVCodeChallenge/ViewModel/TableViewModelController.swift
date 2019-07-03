@@ -10,6 +10,7 @@ import UIKit
 
 protocol TableViewModelControllerDelegate: class {
     func tableViewModelControllerDidFinishLoadInformation(_ tableViewModelController: TableViewModelController)
+    func tableViewModelControllerDidSelectJob(_ tableViewModelController: TableViewModelController, didSelect: IndexPath)
 }
 
 class TableViewModelController: NSObject {
@@ -38,19 +39,19 @@ class TableViewModelController: NSObject {
 private extension TableViewModelController {
     
     func fillTable(with information: CVData) {
-        self.tableCellModel.append(TableCellModel(opened: false,
+        tableCellModel.append(TableCellModel(opened: false,
                                                   cellTitle: NSLocalizedString("ProfileTitle", comment: ""),
                                                   sectionData: [SectionData(subCellTitle: NSLocalizedString("ProfileName", comment: ""), subCellInformation: information.info.name + " " + information.info.surnames), SectionData(subCellTitle: NSLocalizedString("ProfileAge", comment: ""), subCellInformation: information.info.age), SectionData(subCellTitle: NSLocalizedString("ProfileNationality", comment: ""), subCellInformation: information.info.nationality)]))
         for employee in information.experience {
-            self.jobsTable.append(SectionData(subCellTitle: employee.place, subCellInformation: employee.job))
+            jobsTable.append(SectionData(subCellTitle: employee.place, subCellInformation: employee.job))
         }
-        self.tableCellModel.append(TableCellModel(opened: false,
+        tableCellModel.append(TableCellModel(opened: false,
                                                   cellTitle: NSLocalizedString("JobsTitle", comment: ""),
                                                   sectionData: jobsTable))
         for element in information.skills {
-            self.skillsTable.append(SectionData(subCellTitle: "", subCellInformation: element.skill))
+            skillsTable.append(SectionData(subCellTitle: "", subCellInformation: element.skill))
         }
-        self.tableCellModel.append(TableCellModel(opened: false,
+        tableCellModel.append(TableCellModel(opened: false,
                                                   cellTitle: NSLocalizedString("SkillsTitle", comment: ""),
                                                   sectionData: skillsTable))
         delegate?.tableViewModelControllerDidFinishLoadInformation(self)

@@ -37,12 +37,25 @@ class MainTableViewController: UITableViewController {
 }
 
 extension MainTableViewController: TableViewModelControllerDelegate {
+    func tableViewModelControllerDidSelectJob(_ tableViewModelController: TableViewModelController, didSelect: IndexPath) {
+        guard let modalViewController = storyboard?.instantiateViewController(withIdentifier: "JobDetailViewController") as? JobDetailViewController else { return }
+        present(modalViewController, animated: true)
+        modalViewController.delegate = self
+        print("Selected: \(didSelect)")
+    }
+    
     
     func tableViewModelControllerDidFinishLoadInformation(_ tableViewModelController: TableViewModelController) {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            self.popLoadingView()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+            self?.popLoadingView()
         }
+    }
+}
+
+extension MainTableViewController: JobDetailViewControllerDelegate {
+    func jobDetailViewControllerDidTapClose(_ jobDetailViewController: JobDetailViewController) {
+        dismiss(animated: true, completion: nil)
     }
     
     

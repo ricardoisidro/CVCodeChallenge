@@ -13,4 +13,5 @@ struct Job: Codable {
     var place: String
     var start: String
     var end: String
+    var description: String
 }

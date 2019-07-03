@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,6 +46,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW4-53-9Gi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1368.1159420289855" y="-538.39285714285711"/>
+        </scene>
+        <!--Job Detail View Controller-->
+        <scene sceneID="fzl-Pi-p0t">
+            <objects>
+                <viewController storyboardIdentifier="JobDetailViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="kmB-RM-dk1" customClass="JobDetailViewController" customModule="CVCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oir-n7-KiD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbH-ZU-HgM">
+                                <rect key="frame" x="184" y="313.5" width="46" height="269"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXv-bs-YlY">
+                                        <rect key="frame" x="0.0" y="239" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tappedButton:" destination="kmB-RM-dk1" eventType="touchUpInside" id="dCc-Sz-jS7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eXv-bs-YlY" firstAttribute="leading" secondItem="pbH-ZU-HgM" secondAttribute="leading" id="YEP-hx-WP0"/>
+                                    <constraint firstAttribute="trailing" secondItem="eXv-bs-YlY" secondAttribute="trailing" id="tLs-xP-CkP"/>
+                                    <constraint firstAttribute="bottom" secondItem="eXv-bs-YlY" secondAttribute="bottom" id="u9T-5u-O3C"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42681234137055835" green="0.42681234137055835" blue="0.42681234137055835" alpha="0.33256635273972601" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="pbH-ZU-HgM" firstAttribute="centerX" secondItem="oir-n7-KiD" secondAttribute="centerX" id="DY4-OJ-BgR"/>
+                            <constraint firstItem="pbH-ZU-HgM" firstAttribute="centerY" secondItem="oir-n7-KiD" secondAttribute="centerY" id="MeV-UP-fSm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K8G-5N-yHi"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="eXv-bs-YlY" id="8Up-GO-Kwl"/>
+                        <outlet property="modalView" destination="pbH-ZU-HgM" id="Gge-T3-zsm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTI-G8-uxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2198.5507246376815" y="-538.39285714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wi3-eb-efQ">
