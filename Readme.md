@@ -29,7 +29,7 @@ Additional libraries are not needed to build this project. Just download it and 
 
 **Screenshots**
 
-![main image](imgs/screenshot01.png)
+<img src="imgs/screenshot01.png" width="300" height="600">
 
 **Test Coverage**
 
