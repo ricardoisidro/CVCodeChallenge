@@ -13,6 +13,7 @@
 		236453F422CE4B27001438DF /* CVInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 236453F322CE4B27001438DF /* CVInfo.json */; };
 		236453F622CE4B37001438DF /* badCVInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 236453F522CE4B37001438DF /* badCVInfo.json */; };
 		236453F822CE5E4E001438DF /* CVCodeChallengeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236453F722CE5E4E001438DF /* CVCodeChallengeViewModelTests.swift */; };
+		236453FA22CE7258001438DF /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 236453F922CE7258001438DF /* Readme.md */; };
 		92AB4D3122CA6E530033AE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D3022CA6E530033AE1F /* AppDelegate.swift */; };
 		92AB4D3322CA6E530033AE1F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D3222CA6E530033AE1F /* MainTableViewController.swift */; };
 		92AB4D3622CA6E530033AE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AB4D3422CA6E530033AE1F /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		236453F322CE4B27001438DF /* CVInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CVInfo.json; sourceTree = "<group>"; };
 		236453F522CE4B37001438DF /* badCVInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badCVInfo.json; sourceTree = "<group>"; };
 		236453F722CE5E4E001438DF /* CVCodeChallengeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCodeChallengeViewModelTests.swift; sourceTree = "<group>"; };
+		236453F922CE7258001438DF /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		92AB4D2D22CA6E530033AE1F /* CVCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AB4D3022CA6E530033AE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92AB4D3222CA6E530033AE1F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		92AB4D2422CA6E530033AE1F = {
 			isa = PBXGroup;
 			children = (
+				236453F922CE7258001438DF /* Readme.md */,
 				92AB4D2F22CA6E530033AE1F /* CVCodeChallenge */,
 				92AB4D4422CA6E580033AE1F /* CVCodeChallengeTests */,
 				92AB4D4F22CA6E580033AE1F /* CVCodeChallengeUITests */,
@@ -399,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236453FA22CE7258001438DF /* Readme.md in Resources */,
 				92AB4D3B22CA6E570033AE1F /* LaunchScreen.storyboard in Resources */,
 				92AB4D8322CA754C0033AE1F /* Localizable.strings in Resources */,
 				236453F622CE4B37001438DF /* badCVInfo.json in Resources */,
