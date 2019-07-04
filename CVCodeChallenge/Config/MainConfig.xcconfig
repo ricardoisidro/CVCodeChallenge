@@ -1,11 +1,7 @@
 //
 //  MainConfig.xcconfig
 //  CVCodeChallenge
-//
-//  Created by Ricardo Isidro Ramirez on 7/1/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
 
 ROOT_SCHEME = https
-ROOT_HOST = raw.githubusercontent.com
-ROOT_PATH = /ricardoisidro/JSONCV/master/cv.json
+ROOT_HOST = gist.githubusercontent.com
+ROOT_PATH = /prickly-patroller19/b120ff3ca8539e5d292f5d075ce57311/raw/80e80cf3670a118ad539541ad78fe850a871004b/CVInfo

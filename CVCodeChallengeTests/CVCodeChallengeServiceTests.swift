@@ -19,7 +19,7 @@ class CVCodeChallengeTests: XCTestCase {
     }
     
     func testValidCallToGithub() {
-        guard let url = URL(string: "https://raw.githubusercontent.com/ricardoisidro/JSONCV/master/cv.json") else { return }
+        guard let url = URL(string: "https://gist.githubusercontent.com/prickly-patroller19/b120ff3ca8539e5d292f5d075ce57311/raw/80e80cf3670a118ad539541ad78fe850a871004b/CVInfo") else { return }
         let promise = expectation(description: "Status code: 200")
         var statusCode: Int?
         var responseError: Error?
@@ -127,19 +127,5 @@ class CVCodeChallengeTests: XCTestCase {
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
-    }
-    
-    //TODO: Test View model charge of information
-    func testCVInformationInitializesCorrectly() {
-//        let basicInformation = CVInformation.CodingData.Info(name: "Ricardo", surnames: "Isidro Ramírez", age: "32", nationality: "Mexican")
-//        let job = Job(job: "Developer", place: "Globant", start: "Mar 2019", end: "Current")
-//        let skill = Skill(skill: "iOS")
-//        let completeInformation = CVInformation.CodingData(info: basicInformation, experience: [job], skills: [skill])
-//
-//        XCTAssertEqual(completeInformation.info.name, "Ricardo")
-//        XCTAssertEqual(completeInformation.info.age, "32")
-//        XCTAssertEqual(completeInformation.info.nationality, "Mexican")
-//        XCTAssertEqual(completeInformation.experience.first?.job, "Developer")
-//        XCTAssertEqual(completeInformation.skills.first?.skill, "iOS")
     }
 }
