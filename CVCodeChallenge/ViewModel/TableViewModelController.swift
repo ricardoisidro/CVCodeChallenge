@@ -6,7 +6,6 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
     var cvInformation: CVInformation.CodingData?
     
     var completeDidLoad: (() -> ()) = { }
-    var bindsAreSet: Bool = false
     
     var tableCellModel = [TableCellModel]()
     private var skillsTable = [SectionData]()
@@ -26,7 +25,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
     var degree: CVObservable<String> = CVObservable("")
     var period: CVObservable<String> = CVObservable("")
     
-    var jobs: [JobExperience] = [JobExperience]()
+    var jobs: [JobsGroup] = [JobsGroup]()
     var skills: [SkillsGroup] = [SkillsGroup]()
     var schools: [SchoolGroup] = [SchoolGroup]()
         
@@ -80,7 +79,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
     
     func fillExperienceArrays() {
         cvInformation?.experience.forEach { experience in
-            jobs.append(JobExperience())
+            jobs.append(JobsGroup())
         }
     }
     

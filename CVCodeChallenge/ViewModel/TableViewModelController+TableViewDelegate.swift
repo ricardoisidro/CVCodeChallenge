@@ -100,6 +100,14 @@ private extension TableViewModelController {
     func createHeader(using cell: UITableViewCell, in index: IndexPath) -> UITableViewCell {
         cell.textLabel?.text = tableCellModel[index.section].cellTitle
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: TableSizes.Header.fontSize)
+        switch index.section {
+        case 0: cell.backgroundColor = .gray1
+        case 1: cell.backgroundColor = .gray2
+        case 2: cell.backgroundColor = .gray3
+        case 3: cell.backgroundColor = .gray4
+        case 4: cell.backgroundColor = .gray5
+        default: cell.backgroundColor = .gray
+        }
         return cell
     }
     

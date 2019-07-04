@@ -1,6 +1,6 @@
 import Foundation
 
-struct JobExperience {
+struct JobsGroup {
     var job: CVObservable<String> = CVObservable("")
     var place: CVObservable<String> = CVObservable("")
     var start: CVObservable<String> = CVObservable("")

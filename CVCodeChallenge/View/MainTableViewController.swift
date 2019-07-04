@@ -3,10 +3,12 @@ import UIKit
 class MainTableViewController: UITableViewController {
     
     private let tableViewModelController = TableViewModelController()
+    @IBOutlet private weak var imageView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pushLoadingView()
+        imageView?.image = UIImage(named: "picture")
         tableViewModelController.completeDidLoad = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()

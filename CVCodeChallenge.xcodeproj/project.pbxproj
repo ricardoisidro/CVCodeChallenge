@@ -33,13 +33,13 @@
 		92AB4D8822CA7B040033AE1F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D8722CA7B040033AE1F /* ApiService.swift */; };
 		92D05C5822CBCC97003A7FF9 /* TableSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5722CBCC97003A7FF9 /* TableSizes.swift */; };
 		92D05C5D22CBD809003A7FF9 /* LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */; };
-		92D05C6122CC155D003A7FF9 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */; };
 		92D05C6A22CD1BF5003A7FF9 /* CVObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6922CD1BF5003A7FF9 /* CVObservable.swift */; };
 		92D05C6C22CD1DCA003A7FF9 /* ObservableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6B22CD1DCA003A7FF9 /* ObservableLabel.swift */; };
 		92D05C6E22CD2114003A7FF9 /* successfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D05C6D22CD2114003A7FF9 /* successfulResponse.json */; };
 		92D05C7022CD218B003A7FF9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6F22CD218B003A7FF9 /* Contact.swift */; };
 		92D05C7222CD21BF003A7FF9 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C7122CD21BF003A7FF9 /* Education.swift */; };
 		92D05C7422CD23A8003A7FF9 /* TableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C7322CD23A8003A7FF9 /* TableViewModelProtocol.swift */; };
+		92D05C7622CDA698003A7FF9 /* UIColor+AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C7522CDA698003A7FF9 /* UIColor+AppTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,13 +93,13 @@
 		92AB4D8722CA7B040033AE1F /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		92D05C5722CBCC97003A7FF9 /* TableSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSizes.swift; sourceTree = "<group>"; };
 		92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraints.swift; sourceTree = "<group>"; };
-		92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		92D05C6922CD1BF5003A7FF9 /* CVObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVObservable.swift; sourceTree = "<group>"; };
 		92D05C6B22CD1DCA003A7FF9 /* ObservableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableLabel.swift; sourceTree = "<group>"; };
 		92D05C6D22CD2114003A7FF9 /* successfulResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = successfulResponse.json; sourceTree = "<group>"; };
 		92D05C6F22CD218B003A7FF9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		92D05C7122CD21BF003A7FF9 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		92D05C7322CD23A8003A7FF9 /* TableViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelProtocol.swift; sourceTree = "<group>"; };
+		92D05C7522CDA698003A7FF9 /* UIColor+AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppTheme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +237,7 @@
 				92AB4D6822CA719B0033AE1F /* DetailTableViewCell.swift */,
 				92AB4D6A22CA71CC0033AE1F /* LoadingViewController.swift */,
 				92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */,
-				92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */,
+				92D05C7522CDA698003A7FF9 /* UIColor+AppTheme.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +399,7 @@
 				92D05C7222CD21BF003A7FF9 /* Education.swift in Sources */,
 				92D05C7022CD218B003A7FF9 /* Contact.swift in Sources */,
 				92AB4D6D22CA72010033AE1F /* CVInformation.swift in Sources */,
+				92D05C7622CDA698003A7FF9 /* UIColor+AppTheme.swift in Sources */,
 				92AB4D7722CA739D0033AE1F /* ApiResource.swift in Sources */,
 				92AB4D3322CA6E530033AE1F /* MainTableViewController.swift in Sources */,
 				92AB4D7F22CA74D40033AE1F /* LoadingError.swift in Sources */,
@@ -419,7 +420,6 @@
 				92AB4D8122CA75080033AE1F /* CVResource.swift in Sources */,
 				92D05C6C22CD1DCA003A7FF9 /* ObservableLabel.swift in Sources */,
 				92AB4D6F22CA72290033AE1F /* Job.swift in Sources */,
-				92D05C6122CC155D003A7FF9 /* JobDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
