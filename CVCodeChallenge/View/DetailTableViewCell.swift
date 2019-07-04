@@ -1,21 +1,12 @@
-//
-//  DetailTableViewCell.swift
-//  CVCodeChallenge
-//
-//  Created by Ricardo Isidro Ramirez on 7/1/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import UIKit
 
 class DetailTableViewCell: UITableViewCell {
     
-    let title = UILabel()
-    let detail = UILabel()
+    var title = ObservableLabel()
+    var detail = ObservableLabel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         title.translatesAutoresizingMaskIntoConstraints = false
         detail.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(title)
@@ -34,6 +25,7 @@ class DetailTableViewCell: UITableViewCell {
         detail.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         detail.heightAnchor.constraint(equalToConstant: LayoutConstraints.Detail.height).isActive = true
         detail.widthAnchor.constraint(equalToConstant: LayoutConstraints.Detail.width).isActive = true
+        detail.numberOfLines = 0
         detail.textAlignment = .right
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ApiService {
+struct ApiService {
     
     typealias UserInformationHandler = (Result<CVInformation.CodingData, LoadingError>) -> Void
     

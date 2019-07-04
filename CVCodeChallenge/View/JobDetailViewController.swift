@@ -19,14 +19,20 @@ class JobDetailViewController: UIViewController {
     
     private var modalHeightConstraint: NSLayoutConstraint?
     private var modalWidthConstraint: NSLayoutConstraint?
-    private var tableViewModelController = TableViewModelController()
+    
+    var tableViewModelController = TableViewModelController()
     
     weak var delegate: JobDetailViewControllerDelegate?
     
+    private var jobTitle = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        jobTitle.translatesAutoresizingMaskIntoConstraints = false
+        modalView?.addSubview(jobTitle)
         configure()
         addConstraints()
+        
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -56,6 +62,10 @@ class JobDetailViewController: UIViewController {
         modalView?.layer.cornerRadius = 10
         modalView?.layer.masksToBounds = true
         closeButton?.setTitle(NSLocalizedString("ModalClose", comment: ""), for: .normal)
+    }
+    
+    private func setLabels() {
+        //jobTitle.text = tableViewModelController
     }
     
     private func addConstraints() {

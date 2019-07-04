@@ -1,11 +1,3 @@
-//
-//  TableViewModelController+TableViewDelegate.swift
-//  CVCodeChallenge
-//
-//  Created by Ricardo Isidro Ramirez on 6/28/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import UIKit
 
 extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
@@ -27,11 +19,41 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
             guard let maincell = tableView.dequeueReusableCell(withIdentifier: "header") else { return UITableViewCell() }
             return createHeader(using: maincell, in: indexPath)
         } else {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "information", for: indexPath) as? DetailTableViewCell {
-                return createDetail(using: cell, in: indexPath)
+            if indexPath.section == 0 {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "profile", for: indexPath) as? DetailTableViewCell {
+                    return createDetail(using: cell, in: indexPath)
+                } else {
+                    return UITableViewCell()
+                }
+            } else if indexPath.section == 1 {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath) as? DetailTableViewCell {
+                    return createDetail(using: cell, in: indexPath)
+                } else {
+                    return UITableViewCell()
+                }
+            }
+            else if indexPath.section == 2 {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "job", for: indexPath) as? DetailTableViewCell {
+                    return createDetail(using: cell, in: indexPath)
+                } else {
+                    return UITableViewCell()
+                }
+            } else if indexPath.section == 3 {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "skill", for: indexPath) as? DetailTableViewCell {
+                    return createDetail(using: cell, in: indexPath)
+                } else {
+                    return UITableViewCell()
+                }
+            } else if indexPath.section == 4 {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "education", for: indexPath) as? DetailTableViewCell {
+                    return createDetail(using: cell, in: indexPath)
+                } else {
+                    return UITableViewCell()
+                }
             } else {
                 return UITableViewCell()
             }
+            
         }
     }
     
@@ -42,12 +64,24 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
             } else {
                 tableCellModel[indexPath.section].opened = true
             }
+            if indexPath.section == 2 {
+                fillExperienceArrays()
+            } else if indexPath.section == 3 {
+                fillSkillsArrays()
+            } else if indexPath.section == 4 {
+                fillSchoolsArrays()
+            }
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
-        } else {
-            if indexPath.section == 1 {
-                delegate?.tableViewModelControllerDidSelectJob(self, didSelect: indexPath)
+            if indexPath.section == 2 {
+                updateCellsExperience()
+            } else if indexPath.section == 3 {
+                updateCellsSkills()
+            } else if indexPath.section == 4 {
+                updateCellsSchools()
             }
+            updateCells()
+        } else {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
@@ -69,10 +103,47 @@ private extension TableViewModelController {
         return cell
     }
     
-    func createDetail(using cell: DetailTableViewCell, in index: IndexPath) -> DetailTableViewCell {
-        cell.title.text = tableCellModel[index.section].sectionData[index.row - 1].subCellTitle
+    func createDetail(using cell: DetailTableViewCell, in index: IndexPath) ->
+        DetailTableViewCell {
+            switch index.section {
+            case 0:
+                cell.title.text = tableCellModel[index.section].sectionData[index.row - 1].subCellTitle
+                switch index.row {
+                case 1:
+                    cell.detail.bind(to: name)
+                case 2:
+                    cell.detail.bind(to: surname)
+                case 3:
+                    cell.detail.bind(to: age)
+                case 4:
+                    cell.detail.bind(to: nationality)
+                default:
+                    break
+                }
+            case 1:
+                cell.title.text = tableCellModel[index.section].sectionData[index.row - 1].subCellTitle
+                switch index.row {
+                case 1:
+                    cell.detail.bind(to: mail)
+                case 2:
+                    cell.detail.bind(to: phone)
+                case 3:
+                    cell.detail.bind(to: webpage)
+                default:
+                    break
+                }
+            case 2:
+                cell.title.bind(to: jobs[index.row - 1].job)
+                cell.detail.bind(to: jobs[index.row - 1].place)
+            case 3:
+                cell.detail.bind(to: skills[index.row - 1].skill)
+            case 4:
+                cell.title.bind(to: schools[index.row - 1].degree)
+                cell.detail.bind(to: schools[index.row - 1].period)
+           default:
+                break
+            }
         cell.title.font = UIFont.boldSystemFont(ofSize: TableSizes.Detail.fontSize)
-        cell.detail.text = tableCellModel[index.section].sectionData[index.row - 1].subCellInformation
         cell.detail.font = UIFont.systemFont(ofSize: TableSizes.Detail.fontSize)
         return cell
     }

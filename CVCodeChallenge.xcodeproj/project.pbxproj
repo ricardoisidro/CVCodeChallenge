@@ -32,9 +32,14 @@
 		92AB4D8622CA75970033AE1F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D8522CA75970033AE1F /* Environment.swift */; };
 		92AB4D8822CA7B040033AE1F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D8722CA7B040033AE1F /* ApiService.swift */; };
 		92D05C5822CBCC97003A7FF9 /* TableSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5722CBCC97003A7FF9 /* TableSizes.swift */; };
-		92D05C5B22CBCDC1003A7FF9 /* UILabel+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5A22CBCDC1003A7FF9 /* UILabel+Utils.swift */; };
 		92D05C5D22CBD809003A7FF9 /* LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */; };
 		92D05C6122CC155D003A7FF9 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */; };
+		92D05C6A22CD1BF5003A7FF9 /* CVObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6922CD1BF5003A7FF9 /* CVObservable.swift */; };
+		92D05C6C22CD1DCA003A7FF9 /* ObservableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6B22CD1DCA003A7FF9 /* ObservableLabel.swift */; };
+		92D05C6E22CD2114003A7FF9 /* successfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D05C6D22CD2114003A7FF9 /* successfulResponse.json */; };
+		92D05C7022CD218B003A7FF9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C6F22CD218B003A7FF9 /* Contact.swift */; };
+		92D05C7222CD21BF003A7FF9 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C7122CD21BF003A7FF9 /* Education.swift */; };
+		92D05C7422CD23A8003A7FF9 /* TableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D05C7322CD23A8003A7FF9 /* TableViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,9 +92,14 @@
 		92AB4D8522CA75970033AE1F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		92AB4D8722CA7B040033AE1F /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		92D05C5722CBCC97003A7FF9 /* TableSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSizes.swift; sourceTree = "<group>"; };
-		92D05C5A22CBCDC1003A7FF9 /* UILabel+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Utils.swift"; sourceTree = "<group>"; };
 		92D05C5C22CBD809003A7FF9 /* LayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraints.swift; sourceTree = "<group>"; };
 		92D05C6022CC155D003A7FF9 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		92D05C6922CD1BF5003A7FF9 /* CVObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVObservable.swift; sourceTree = "<group>"; };
+		92D05C6B22CD1DCA003A7FF9 /* ObservableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableLabel.swift; sourceTree = "<group>"; };
+		92D05C6D22CD2114003A7FF9 /* successfulResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = successfulResponse.json; sourceTree = "<group>"; };
+		92D05C6F22CD218B003A7FF9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		92D05C7122CD21BF003A7FF9 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		92D05C7322CD23A8003A7FF9 /* TableViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +150,7 @@
 		92AB4D2F22CA6E530033AE1F /* CVCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				92D05C5922CBCDAE003A7FF9 /* Extensions */,
+				92D05C6822CD19CD003A7FF9 /* Observables */,
 				92AB4D6322CA6EB90033AE1F /* ViewModel */,
 				92AB4D6222CA6EB10033AE1F /* View */,
 				92AB4D6122CA6EA70033AE1F /* Model */,
@@ -157,6 +167,7 @@
 			children = (
 				92AB4D4522CA6E580033AE1F /* CVCodeChallengeTests.swift */,
 				92AB4D4722CA6E580033AE1F /* Info.plist */,
+				92D05C6D22CD2114003A7FF9 /* successfulResponse.json */,
 			);
 			path = CVCodeChallengeTests;
 			sourceTree = "<group>";
@@ -210,6 +221,8 @@
 				92AB4D6E22CA72290033AE1F /* Job.swift */,
 				92AB4D7022CA72510033AE1F /* Skill.swift */,
 				92AB4D7222CA73180033AE1F /* TableCellModel.swift */,
+				92D05C6F22CD218B003A7FF9 /* Contact.swift */,
+				92D05C7122CD21BF003A7FF9 /* Education.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,16 +247,18 @@
 			children = (
 				92AB4D6422CA6EF70033AE1F /* TableViewModelController.swift */,
 				92AB4D6622CA6F450033AE1F /* TableViewModelController+TableViewDelegate.swift */,
+				92D05C7322CD23A8003A7FF9 /* TableViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		92D05C5922CBCDAE003A7FF9 /* Extensions */ = {
+		92D05C6822CD19CD003A7FF9 /* Observables */ = {
 			isa = PBXGroup;
 			children = (
-				92D05C5A22CBCDC1003A7FF9 /* UILabel+Utils.swift */,
+				92D05C6922CD1BF5003A7FF9 /* CVObservable.swift */,
+				92D05C6B22CD1DCA003A7FF9 /* ObservableLabel.swift */,
 			);
-			path = Extensions;
+			path = Observables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D05C6E22CD2114003A7FF9 /* successfulResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +396,8 @@
 			files = (
 				92AB4D7922CA74420033AE1F /* NetworkRequest.swift in Sources */,
 				92AB4D6722CA6F450033AE1F /* TableViewModelController+TableViewDelegate.swift in Sources */,
+				92D05C7222CD21BF003A7FF9 /* Education.swift in Sources */,
+				92D05C7022CD218B003A7FF9 /* Contact.swift in Sources */,
 				92AB4D6D22CA72010033AE1F /* CVInformation.swift in Sources */,
 				92AB4D7722CA739D0033AE1F /* ApiResource.swift in Sources */,
 				92AB4D3322CA6E530033AE1F /* MainTableViewController.swift in Sources */,
@@ -390,14 +408,16 @@
 				92AB4D6922CA719B0033AE1F /* DetailTableViewCell.swift in Sources */,
 				92AB4D7D22CA74B00033AE1F /* ApiRequest.swift in Sources */,
 				92AB4D7B22CA746C0033AE1F /* RequestToken.swift in Sources */,
+				92D05C7422CD23A8003A7FF9 /* TableViewModelProtocol.swift in Sources */,
 				92AB4D7322CA73180033AE1F /* TableCellModel.swift in Sources */,
 				92AB4D8622CA75970033AE1F /* Environment.swift in Sources */,
+				92D05C6A22CD1BF5003A7FF9 /* CVObservable.swift in Sources */,
 				92AB4D6522CA6EF70033AE1F /* TableViewModelController.swift in Sources */,
 				92AB4D8822CA7B040033AE1F /* ApiService.swift in Sources */,
 				92AB4D6B22CA71CD0033AE1F /* LoadingViewController.swift in Sources */,
-				92D05C5B22CBCDC1003A7FF9 /* UILabel+Utils.swift in Sources */,
 				92D05C5822CBCC97003A7FF9 /* TableSizes.swift in Sources */,
 				92AB4D8122CA75080033AE1F /* CVResource.swift in Sources */,
+				92D05C6C22CD1DCA003A7FF9 /* ObservableLabel.swift in Sources */,
 				92AB4D6F22CA72290033AE1F /* Job.swift in Sources */,
 				92D05C6122CC155D003A7FF9 /* JobDetailViewController.swift in Sources */,
 			);
