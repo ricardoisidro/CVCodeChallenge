@@ -16,37 +16,36 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            guard let maincell = tableView.dequeueReusableCell(withIdentifier: "header") else { return UITableViewCell() }
+            guard let maincell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.header.rawValue) else { return UITableViewCell() }
             return createHeader(using: maincell, in: indexPath)
         } else {
             if indexPath.section == 0 {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "profile", for: indexPath) as? DetailTableViewCell {
-                    
+                if let cell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.profile.rawValue, for: indexPath) as? DetailTableViewCell {
                     return createDetail(using: cell, in: indexPath)
                 } else {
                     return UITableViewCell()
                 }
             } else if indexPath.section == 1 {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath) as? DetailTableViewCell {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.contact.rawValue, for: indexPath) as? DetailTableViewCell {
                     return createDetail(using: cell, in: indexPath)
                 } else {
                     return UITableViewCell()
                 }
             }
             else if indexPath.section == 2 {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "job", for: indexPath) as? DetailTableViewCell {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.job.rawValue, for: indexPath) as? DetailTableViewCell {
                     return createDetail(using: cell, in: indexPath)
                 } else {
                     return UITableViewCell()
                 }
             } else if indexPath.section == 3 {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "skill", for: indexPath) as? DetailTableViewCell {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.skill.rawValue, for: indexPath) as? DetailTableViewCell {
                     return createDetail(using: cell, in: indexPath)
                 } else {
                     return UITableViewCell()
                 }
             } else if indexPath.section == 4 {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "education", for: indexPath) as? DetailTableViewCell {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.education.rawValue, for: indexPath) as? DetailTableViewCell {
                     return createDetail(using: cell, in: indexPath)
                 } else {
                     return UITableViewCell()

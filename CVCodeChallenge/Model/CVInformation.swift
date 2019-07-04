@@ -18,6 +18,14 @@ struct CVInformation: Codable {
 
 extension CVInformation {
     
+    init() {
+        name = ""
+        surnames = ""
+        age = 0
+        jobs = [Job]()
+        skills = [Skill]()
+    }
+    
     struct CodingData: Decodable {
         var info: Info
         var contact: Contact
