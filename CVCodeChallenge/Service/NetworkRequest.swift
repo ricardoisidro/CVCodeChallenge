@@ -1,11 +1,3 @@
-//
-//  NetworkRequest.swift
-//  CVCodeChallenge
-//
-//  Created by Ricardo Isidro Ramirez on 6/28/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import Foundation
 
 protocol NetworkRequest {
@@ -18,11 +10,11 @@ extension NetworkRequest {
     
     @discardableResult
     func load(url: URL, then handler: @escaping (Result<LoadedType, LoadingError>) -> Void) -> RequestToken {
-        let request = NSMutableURLRequest(url: url)
+        var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: request as URLRequest) { (data: Data?, _: URLResponse?, error: Error?) in
+        let task = session.dataTask(with: request) { (data: Data?, _: URLResponse?, error: Error?) in
             if error != nil {
                 handler(Result.failure(.loadFail))
                 return

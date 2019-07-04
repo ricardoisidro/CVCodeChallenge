@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  CVCodeChallenge
-//
-//  Created by Ricardo Isidro Ramirez on 6/28/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

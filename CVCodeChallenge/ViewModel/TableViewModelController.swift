@@ -101,24 +101,24 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
     
     private func fillTable() {
         
-        let nameCell = SectionData(subCellTitle: NSLocalizedString("ProfileName", comment: ""), subCellInformation: "")
-        let surnameCell = SectionData(subCellTitle: NSLocalizedString("ProfileSurname", comment: ""), subCellInformation: "")
-        let ageCell = SectionData(subCellTitle: NSLocalizedString("ProfileAge", comment: ""), subCellInformation: "")
-        let nationalityCell = SectionData(subCellTitle: NSLocalizedString("ProfileNationality", comment: ""), subCellInformation: nationality.value ?? "")
-        tableCellModel.append(TableCellModel(opened: false, cellTitle: NSLocalizedString("ProfileTitle", comment: ""), sectionData: [nameCell, surnameCell, ageCell, nationalityCell]))
+        let nameCell = SectionData(subCellTitle: "ProfileName".localized(), subCellInformation: "")
+        let surnameCell = SectionData(subCellTitle: "ProfileSurname".localized(), subCellInformation: "")
+        let ageCell = SectionData(subCellTitle: "ProfileAge".localized(), subCellInformation: "")
+        let nationalityCell = SectionData(subCellTitle: "ProfileNationality".localized(), subCellInformation: nationality.value ?? "")
+        tableCellModel.append(TableCellModel(opened: false, cellTitle: "ProfileTitle".localized(), sectionData: [nameCell, surnameCell, ageCell, nationalityCell]))
         
-        let mailCell = SectionData(subCellTitle: NSLocalizedString("ProfileEmail", comment: ""), subCellInformation: "")
-        let phoneCell = SectionData(subCellTitle: NSLocalizedString("ProfilePhone", comment: ""), subCellInformation: "")
-        let webCell = SectionData(subCellTitle: NSLocalizedString("ProfileWeb", comment: ""), subCellInformation: "")
+        let mailCell = SectionData(subCellTitle: "ProfileEmail".localized(), subCellInformation: "")
+        let phoneCell = SectionData(subCellTitle: "ProfilePhone".localized(), subCellInformation: "")
+        let webCell = SectionData(subCellTitle: "ProfileWeb".localized(), subCellInformation: "")
         
-        tableCellModel.append(TableCellModel(opened: false, cellTitle: NSLocalizedString("ProfileContact", comment: ""), sectionData: [mailCell, phoneCell, webCell]))
+        tableCellModel.append(TableCellModel(opened: false, cellTitle: "ProfileContact".localized(), sectionData: [mailCell, phoneCell, webCell]))
         
         guard let jobs = cvInformation?.experience else { return }
         for _ in jobs {
             jobsTable.append(SectionData(subCellTitle: "", subCellInformation: ""))
         }
         tableCellModel.append(TableCellModel(opened: false,
-                                             cellTitle: NSLocalizedString("JobsTitle", comment: ""),
+                                             cellTitle: "JobsTitle".localized(),
                                              sectionData: jobsTable))
         
         guard let skills = cvInformation?.skills else { return }
@@ -126,7 +126,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
             skillsTable.append(SectionData(subCellTitle: "", subCellInformation: ""))
         }
         tableCellModel.append(TableCellModel(opened: false,
-                                             cellTitle: NSLocalizedString("SkillsTitle", comment: ""),
+                                             cellTitle: "SkillsTitle".localized(),
                                              sectionData: skillsTable))
         
         guard let institutes = cvInformation?.education else { return }
@@ -134,7 +134,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
             schoolsTable.append(SectionData(subCellTitle: "", subCellInformation: ""))
         }
         tableCellModel.append(TableCellModel(opened: false,
-                                             cellTitle: NSLocalizedString("SchoolTitle", comment: ""),
+                                             cellTitle: "SchoolTitle".localized(),
                                              sectionData: schoolsTable))
         completeDidLoad?()
 

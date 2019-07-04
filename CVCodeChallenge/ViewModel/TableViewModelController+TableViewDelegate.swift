@@ -1,11 +1,11 @@
 import UIKit
 
 extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableCellModel.count
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableCellModel[section].opened {
             return tableCellModel[section].sectionData.count + 1
@@ -13,7 +13,7 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
             return 1
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let maincell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.header.rawValue) else { return UITableViewCell() }
@@ -53,10 +53,10 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
             } else {
                 return UITableViewCell()
             }
-            
+
         }
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             if tableCellModel[indexPath.section].opened {
@@ -85,7 +85,7 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return TableSizes.Header.height
@@ -96,7 +96,7 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
 }
 
 private extension TableViewModelController {
-    
+
     func createHeader(using cell: UITableViewCell, in index: IndexPath) -> UITableViewCell {
         cell.textLabel?.text = tableCellModel[index.section].cellTitle
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: TableSizes.Header.fontSize)
@@ -120,7 +120,7 @@ private extension TableViewModelController {
         }
         return cell
     }
-    
+
     func createDetail(using cell: DetailTableViewCell, in index: IndexPath) ->
         DetailTableViewCell {
             switch index.section {

@@ -12,7 +12,6 @@ class DetailTableViewCell: UITableViewCell {
         contentView.addSubview(title)
         contentView.addSubview(detail)
         setConstraints()
-        
     }
     
     private func setConstraints() {
@@ -21,7 +20,7 @@ class DetailTableViewCell: UITableViewCell {
         title.heightAnchor.constraint(equalToConstant: LayoutConstraints.Title.height).isActive = true
         title.widthAnchor.constraint(equalToConstant: LayoutConstraints.Title.width).isActive = true
         
-        contentView.addConstraint(NSLayoutConstraint(item: detail, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailingMargin, multiplier: 1.0, constant: LayoutConstraints.Detail.trailing))
+        contentView.trailingAnchor.constraint(greaterThanOrEqualTo: detail.trailingAnchor, constant: LayoutConstraints.Detail.trailing).isActive = true
         detail.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         detail.heightAnchor.constraint(equalToConstant: LayoutConstraints.Detail.height).isActive = true
         detail.widthAnchor.constraint(equalToConstant: LayoutConstraints.Detail.width).isActive = true

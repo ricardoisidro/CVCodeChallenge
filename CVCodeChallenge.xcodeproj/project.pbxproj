@@ -14,6 +14,7 @@
 		236453F622CE4B37001438DF /* badCVInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 236453F522CE4B37001438DF /* badCVInfo.json */; };
 		236453F822CE5E4E001438DF /* CVCodeChallengeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236453F722CE5E4E001438DF /* CVCodeChallengeViewModelTests.swift */; };
 		236453FA22CE7258001438DF /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 236453F922CE7258001438DF /* Readme.md */; };
+		9221045A22CE5F0E008B1611 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221045922CE5F0E008B1611 /* String+Utils.swift */; };
 		92AB4D3122CA6E530033AE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D3022CA6E530033AE1F /* AppDelegate.swift */; };
 		92AB4D3322CA6E530033AE1F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D3222CA6E530033AE1F /* MainTableViewController.swift */; };
 		92AB4D3622CA6E530033AE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AB4D3422CA6E530033AE1F /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		236453F522CE4B37001438DF /* badCVInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badCVInfo.json; sourceTree = "<group>"; };
 		236453F722CE5E4E001438DF /* CVCodeChallengeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCodeChallengeViewModelTests.swift; sourceTree = "<group>"; };
 		236453F922CE7258001438DF /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		9221045922CE5F0E008B1611 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		92AB4D2D22CA6E530033AE1F /* CVCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AB4D3022CA6E530033AE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92AB4D3222CA6E530033AE1F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				92AB4D8422CA75780033AE1F /* MainConfig.xcconfig */,
 				92AB4D8522CA75970033AE1F /* Environment.swift */,
 				92D05C5722CBCC97003A7FF9 /* TableSizes.swift */,
+				9221045922CE5F0E008B1611 /* String+Utils.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				92AB4D6922CA719B0033AE1F /* DetailTableViewCell.swift in Sources */,
 				92AB4D7D22CA74B00033AE1F /* ApiRequest.swift in Sources */,
 				236453ED22CD96CA001438DF /* CellsIdentifiers.swift in Sources */,
+				9221045A22CE5F0E008B1611 /* String+Utils.swift in Sources */,
 				92AB4D7B22CA746C0033AE1F /* RequestToken.swift in Sources */,
 				92D05C7422CD23A8003A7FF9 /* TableViewModelProtocol.swift in Sources */,
 				92AB4D7322CA73180033AE1F /* TableCellModel.swift in Sources */,

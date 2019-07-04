@@ -24,7 +24,7 @@ class MainTableViewController: UITableViewController {
     }
     
     private func configure() {
-        navigationItem.title = NSLocalizedString("Title", comment: "Table title")
+        navigationItem.title = "Title".localized()
         tableView.dataSource = tableViewModelController
         tableView.delegate = tableViewModelController
     }
@@ -39,10 +39,10 @@ class MainTableViewController: UITableViewController {
     }
     
     private func alertFailure() {
-        let alert = UIAlertController(title: NSLocalizedString("MessageTitle", comment: ""),
-                                      message: NSLocalizedString("MessageContent", comment: ""),
+        let alert = UIAlertController(title: "MessageTitle".localized(),
+                                      message: "MessageContent".localized(),
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("MessageButton", comment: ""),
+        alert.addAction(UIAlertAction(title: "MessageButton".localized(),
                                       style: .default,
                                       handler: nil))
         present(alert, animated: true, completion: nil)
