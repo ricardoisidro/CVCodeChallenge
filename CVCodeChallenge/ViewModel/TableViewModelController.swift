@@ -40,11 +40,8 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
                 self.fillTable()
                 break
             case .failure:
-<<<<<<< HEAD
                 self.loadDidFail?()
-=======
                 self.cvInformation = nil
->>>>>>> feature: Resolve some comments and give some scopes for To Do
             }
         }
     }

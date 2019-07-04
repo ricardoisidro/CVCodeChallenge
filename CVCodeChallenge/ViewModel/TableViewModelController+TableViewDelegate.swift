@@ -20,12 +20,7 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
             return createHeader(using: maincell, in: indexPath)
         } else {
             if indexPath.section == 0 {
-<<<<<<< HEAD
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "profile", for: indexPath) as? DetailTableViewCell {
-                    
-=======
                 if let cell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifiers.profile.rawValue, for: indexPath) as? DetailTableViewCell {
->>>>>>> feature: Resolve some comments and give some scopes for To Do
                     return createDetail(using: cell, in: indexPath)
                 } else {
                     return UITableViewCell()
