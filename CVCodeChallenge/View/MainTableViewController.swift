@@ -9,14 +9,18 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
         pushLoadingView()
         imageView?.image = UIImage(named: "picture")
+        configure()
         tableViewModelController.completeDidLoad = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
                 self?.popLoadingView()
             }
         }
-        configure()
         tableViewModelController.fill()
+        tableViewModelController.loadDidFail = { [weak self] in
+            self?.popLoadingView()
+            self?.alertFailure()
+        }
     }
     
     private func configure() {
@@ -32,5 +36,15 @@ class MainTableViewController: UITableViewController {
     
     private func popLoadingView() {
         navigationController?.dismiss(animated: false, completion: nil)
+    }
+    
+    private func alertFailure() {
+        let alert = UIAlertController(title: NSLocalizedString("MessageTitle", comment: ""),
+                                      message: NSLocalizedString("MessageContent", comment: ""),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("MessageButton", comment: ""),
+                                      style: .default,
+                                      handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

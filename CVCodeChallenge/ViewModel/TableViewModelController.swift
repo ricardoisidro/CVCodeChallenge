@@ -5,7 +5,8 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
     // MARK: - Variables
     var cvInformation: CVInformation.CodingData?
     
-    var completeDidLoad: (() -> ()) = { }
+    var completeDidLoad: (() -> Void)?
+    var loadDidFail: (() -> Void)?
     
     var tableCellModel = [TableCellModel]()
     private var skillsTable = [SectionData]()
@@ -39,7 +40,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
                 self.fillTable()
                 break
             case .failure:
-                print("Error")
+                self.loadDidFail?()
             }
         }
     }
@@ -132,7 +133,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
         tableCellModel.append(TableCellModel(opened: false,
                                              cellTitle: NSLocalizedString("SchoolTitle", comment: ""),
                                              sectionData: schoolsTable))
-        completeDidLoad()
+        completeDidLoad?()
 
     }
 }
