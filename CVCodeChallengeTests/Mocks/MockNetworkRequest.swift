@@ -2,7 +2,7 @@ import Foundation
 
 protocol NetworkRequestMocking {
     func load(then handler: @escaping (Result<Data, LoadingError>) -> Void) -> RequestToken
-    func decode(_ data: Data) throws -> CVInformation?
+    func decode(_ data: Data) -> CVInformation?
 }
 
 class MockNetworkRequest: NetworkRequestMocking {
@@ -24,10 +24,10 @@ class MockNetworkRequest: NetworkRequestMocking {
         }
     }
     
-    func decode(_ data: Data) throws -> CVInformation? {
+    func decode(_ data: Data) -> CVInformation? {
         let decoder = JSONDecoder()
-        if let json = try? decoder.decode(CVInformation.self, from: data) {
-            return json
+        if let json = try? decoder.decode(CVInformation.CodingData.self, from: data) {
+            return json.cvInformation
         } else {
             return nil
         }
