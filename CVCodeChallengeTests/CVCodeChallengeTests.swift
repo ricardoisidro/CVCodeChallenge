@@ -1,11 +1,3 @@
-//
-//  CVCodeChallengeTests.swift
-//  CVCodeChallengeTests
-//
-//  Created by Ricardo Isidro Ramirez on 7/1/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import XCTest
 @testable import CVCodeChallenge
 
@@ -75,6 +67,7 @@ class CVCodeChallengeTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    //TODO: Test View model charge of information
     func testCVInformationInitializesCorrectly() {
 //        let basicInformation = CVInformation.CodingData.Info(name: "Ricardo", surnames: "Isidro Ramírez", age: "32", nationality: "Mexican")
 //        let job = Job(job: "Developer", place: "Globant", start: "Mar 2019", end: "Current")

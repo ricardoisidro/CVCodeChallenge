@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236453EB22CD94E4001438DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236453EA22CD94E4001438DF /* Result.swift */; };
+		236453ED22CD96CA001438DF /* CellsIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236453EC22CD96CA001438DF /* CellsIdentifiers.swift */; };
+		236453F222CDA4C4001438DF /* MockNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236453F122CDA4C4001438DF /* MockNetworkRequest.swift */; };
 		92AB4D3122CA6E530033AE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D3022CA6E530033AE1F /* AppDelegate.swift */; };
 		92AB4D3322CA6E530033AE1F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB4D3222CA6E530033AE1F /* MainTableViewController.swift */; };
 		92AB4D3622CA6E530033AE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AB4D3422CA6E530033AE1F /* Main.storyboard */; };
@@ -60,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		236453EA22CD94E4001438DF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		236453EC22CD96CA001438DF /* CellsIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsIdentifiers.swift; sourceTree = "<group>"; };
+		236453F122CDA4C4001438DF /* MockNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkRequest.swift; sourceTree = "<group>"; };
 		92AB4D2D22CA6E530033AE1F /* CVCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AB4D3022CA6E530033AE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92AB4D3222CA6E530033AE1F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +133,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236453E922CD94D2001438DF /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				236453EA22CD94E4001438DF /* Result.swift */,
+				236453EC22CD96CA001438DF /* CellsIdentifiers.swift */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
+		236453EE22CDA368001438DF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				236453F122CDA4C4001438DF /* MockNetworkRequest.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		92AB4D2422CA6E530033AE1F = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +173,7 @@
 		92AB4D2F22CA6E530033AE1F /* CVCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				236453E922CD94D2001438DF /* Extras */,
 				92D05C6822CD19CD003A7FF9 /* Observables */,
 				92AB4D6322CA6EB90033AE1F /* ViewModel */,
 				92AB4D6222CA6EB10033AE1F /* View */,
@@ -165,6 +189,7 @@
 		92AB4D4422CA6E580033AE1F /* CVCodeChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				236453EE22CDA368001438DF /* Mocks */,
 				92AB4D4522CA6E580033AE1F /* CVCodeChallengeTests.swift */,
 				92AB4D4722CA6E580033AE1F /* Info.plist */,
 				92D05C6D22CD2114003A7FF9 /* successfulResponse.json */,
@@ -394,6 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236453EB22CD94E4001438DF /* Result.swift in Sources */,
+				236453F222CDA4C4001438DF /* MockNetworkRequest.swift in Sources */,
 				92AB4D7922CA74420033AE1F /* NetworkRequest.swift in Sources */,
 				92AB4D6722CA6F450033AE1F /* TableViewModelController+TableViewDelegate.swift in Sources */,
 				92D05C7222CD21BF003A7FF9 /* Education.swift in Sources */,
@@ -408,6 +435,7 @@
 				92AB4D3122CA6E530033AE1F /* AppDelegate.swift in Sources */,
 				92AB4D6922CA719B0033AE1F /* DetailTableViewCell.swift in Sources */,
 				92AB4D7D22CA74B00033AE1F /* ApiRequest.swift in Sources */,
+				236453ED22CD96CA001438DF /* CellsIdentifiers.swift in Sources */,
 				92AB4D7B22CA746C0033AE1F /* RequestToken.swift in Sources */,
 				92D05C7422CD23A8003A7FF9 /* TableViewModelProtocol.swift in Sources */,
 				92AB4D7322CA73180033AE1F /* TableCellModel.swift in Sources */,
@@ -646,7 +674,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.CVCodeChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVCodeChallenge.app/CVCodeChallenge";
 			};
@@ -668,7 +696,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.CVCodeChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVCodeChallenge.app/CVCodeChallenge";
 			};
@@ -689,7 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.CVCodeChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CVCodeChallenge;
 			};
@@ -710,7 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.CVCodeChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CVCodeChallenge;
 			};

@@ -13,6 +13,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
     private var jobsTable = [SectionData]()
     private var schoolsTable = [SectionData]()
     
+    //MARK: - Observables properties
     var name: CVObservable<String> = CVObservable("")
     var surname: CVObservable<String> = CVObservable("")
     var age: CVObservable<Int> = CVObservable(0)
@@ -31,7 +32,6 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
     var schools: [SchoolGroup] = [SchoolGroup]()
         
     // MARK: - Functions
-
     func fill() {
         ApiService().loadInformation { (result: Result<CVInformation.CodingData, LoadingError>) in
             switch result {
@@ -40,11 +40,16 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
                 self.fillTable()
                 break
             case .failure:
+<<<<<<< HEAD
                 self.loadDidFail?()
+=======
+                self.cvInformation = nil
+>>>>>>> feature: Resolve some comments and give some scopes for To Do
             }
         }
     }
     
+    //MARK: - Methods fot set values for observables
     func updateCells() {
         name.value = cvInformation?.info.name
         surname.value = cvInformation?.info.surnames
@@ -78,6 +83,7 @@ class TableViewModelController: NSObject, TableViewModelProtocol {
         }
     }
     
+    //MARK: - Fill methods for view
     func fillExperienceArrays() {
         cvInformation?.experience.forEach { experience in
             jobs.append(JobsGroup())
