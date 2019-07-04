@@ -21,6 +21,7 @@ extension TableViewModelController: UITableViewDelegate, UITableViewDataSource {
         } else {
             if indexPath.section == 0 {
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "profile", for: indexPath) as? DetailTableViewCell {
+                    
                     return createDetail(using: cell, in: indexPath)
                 } else {
                     return UITableViewCell()
@@ -101,11 +102,21 @@ private extension TableViewModelController {
         cell.textLabel?.text = tableCellModel[index.section].cellTitle
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: TableSizes.Header.fontSize)
         switch index.section {
-        case 0: cell.backgroundColor = .gray1
-        case 1: cell.backgroundColor = .gray2
-        case 2: cell.backgroundColor = .gray3
-        case 3: cell.backgroundColor = .gray4
-        case 4: cell.backgroundColor = .gray5
+        case 0:
+            cell.accessibilityIdentifier = "cell_section_profile_id"
+            cell.backgroundColor = .gray1
+        case 1:
+            cell.accessibilityIdentifier = "cell_section_contact_id"
+            cell.backgroundColor = .gray2
+        case 2:
+            cell.accessibilityIdentifier = "cell_section_experience_id"
+            cell.backgroundColor = .gray3
+        case 3:
+            cell.accessibilityIdentifier = "cell_section_skills_id"
+            cell.backgroundColor = .gray4
+        case 4:
+            cell.accessibilityIdentifier = "cell_section_education_id"
+            cell.backgroundColor = .gray5
         default: cell.backgroundColor = .gray
         }
         return cell
@@ -116,6 +127,7 @@ private extension TableViewModelController {
             switch index.section {
             case 0:
                 cell.title.text = tableCellModel[index.section].sectionData[index.row - 1].subCellTitle
+                cell.accessibilityIdentifier = "cell_detail_id"
                 switch index.row {
                 case 1:
                     cell.detail.bind(to: name)
@@ -130,6 +142,7 @@ private extension TableViewModelController {
                 }
             case 1:
                 cell.title.text = tableCellModel[index.section].sectionData[index.row - 1].subCellTitle
+                cell.accessibilityIdentifier = "cell_contact_info_id"
                 switch index.row {
                 case 1:
                     cell.detail.bind(to: mail)
@@ -143,11 +156,14 @@ private extension TableViewModelController {
             case 2:
                 cell.title.bind(to: jobs[index.row - 1].job)
                 cell.detail.bind(to: jobs[index.row - 1].place)
+                cell.accessibilityIdentifier = "cell_experience_id"
             case 3:
                 cell.detail.bind(to: skills[index.row - 1].skill)
+                cell.accessibilityIdentifier = "cell_skills_id"
             case 4:
                 cell.title.bind(to: schools[index.row - 1].degree)
                 cell.detail.bind(to: schools[index.row - 1].period)
+                cell.accessibilityIdentifier = "cell_education_id"
            default:
                 break
             }

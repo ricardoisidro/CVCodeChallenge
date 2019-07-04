@@ -10,50 +10,48 @@ import XCTest
 
 class CVCodeChallengeUITests: XCTestCase {
     
-    var app: XCUIApplication!
+    var app = XCUIApplication()
     let tablesQuery = XCUIApplication().tables
+    let imageQuery = XCUIApplication().images
     
     override func setUp() {
         continueAfterFailure = false
-        app = XCUIApplication()
         app.launch()
     }
     
-    func testProfileDetails() {
-        let myProfileStaticText = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["My Profile"]/*[[".cells.staticTexts[\"My Profile\"]",".staticTexts[\"My Profile\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
-        myProfileStaticText.tap()
-        let name = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["Ricardo Isidro Ramírez"]/*[[".cells.staticTexts[\"Ricardo Isidro Ramírez\"]",".staticTexts[\"Ricardo Isidro Ramírez\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
-        let age = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["32"]/*[[".cells.staticTexts[\"32\"]",".staticTexts[\"32\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
-        let country = tablesQuery/*@START_MENU_TOKEN@*/.cells.staticTexts["Mexican"]/*[[".cells.staticTexts[\"Mexican\"]",".staticTexts[\"Mexican\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
-        if myProfileStaticText.isSelected {
-            XCTAssertTrue(name.exists)
-            XCTAssertTrue(age.exists)
-            XCTAssertTrue(country.exists)
-        }
-        myProfileStaticText.tap()
+    func testSectionProfileCellsExists() {
+        let myProfileCell = tablesQuery.cells["cell_section_profile_id"]
+        XCTAssertTrue(myProfileCell.exists)
+        myProfileCell.tap()
+        XCTAssertTrue(app.tables.cells["cell_detail_id"].exists)
     }
     
-    func testJobDetails() {
-        let myJobStaticText = tablesQuery.cells.staticTexts["Former Jobs"]
-        myJobStaticText.tap()
-        let position = tablesQuery.cells.staticTexts["iOS Developer"]
-        if myJobStaticText.isSelected {
-            XCTAssertTrue(position.exists)
-        }
-        myJobStaticText.tap()
+    func testSectionContactInfoCellsExists() {
+        let myContactCell = tablesQuery.cells["cell_section_contact_id"]
+        XCTAssertTrue(myContactCell.exists)
+        myContactCell.tap()
+        XCTAssertTrue(app.tables.cells["cell_contact_info_id"].exists)
     }
     
-    func testSkillDetails() {
-        let mySkillsStaticText = tablesQuery.cells.staticTexts["Skills"]
-        mySkillsStaticText.tap()
-        let skill1 = tablesQuery.cells.staticTexts["Swift"]
-        let skill2 = tablesQuery.cells.staticTexts["AutoLayout"]
-        let skill3 = tablesQuery.cells.staticTexts["Networking"]
-        if mySkillsStaticText.isSelected {
-            XCTAssertTrue(skill1.exists)
-            XCTAssertTrue(skill2.exists)
-            XCTAssertTrue(skill3.exists)
-        }
+    func testSectionExperienceCellsExists() {
+        let myExperienceCell = tablesQuery.cells["cell_section_experience_id"]
+        XCTAssertTrue(myExperienceCell.exists)
+        myExperienceCell.tap()
+        XCTAssertTrue(app.tables.cells["cell_experience_id"].exists)
+    }
+    
+    func testSectionSkillsCellsExists() {
+        let mySkillsCell = tablesQuery.cells["cell_section_skills_id"]
+        XCTAssertTrue(mySkillsCell.exists)
+        mySkillsCell.tap()
+        XCTAssertTrue(app.tables.cells["cell_skills_id"].exists)
+    }
+    
+    func testSectionEducationCellsExists() {
+        let myEducationCell = tablesQuery.cells["cell_section_education_id"]
+        XCTAssertTrue(myEducationCell.exists)
+        myEducationCell.tap()
+        XCTAssertTrue(app.tables.cells["cell_education_id"].exists)
     }
 }
 
