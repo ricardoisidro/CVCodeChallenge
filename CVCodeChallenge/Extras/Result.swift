@@ -1,3 +1,5 @@
+// Ricardo Isidro Ramirez
+
 import Foundation
 
 enum Result<S, F> where F: Error {
